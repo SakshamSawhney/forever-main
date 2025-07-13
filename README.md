@@ -42,7 +42,10 @@ This project is a fully functional e-commerce website built using the MERN (Mong
    cd ../admin
    npm install
    ```
+<<<<<<< HEAD:README.md
 
+=======
+>>>>>>> 783276321aa1a89ad74623e682f944564b303090:forever-main/README.md
 4. Create .env files:
    ```bash
    .env in frontend
@@ -58,7 +61,11 @@ This project is a fully functional e-commerce website built using the MERN (Mong
       STRIPE_SECRET_KEY="<your_stripe_api_key>"
    .env in admin
       VITE_BACKEND_URL = "http://localhost:4000"
+<<<<<<< HEAD:README.md
    ```
+=======
+   
+>>>>>>> 783276321aa1a89ad74623e682f944564b303090:forever-main/README.md
 5. Start the development servers:
    ```bash
    cd frontend
@@ -72,6 +79,7 @@ This project is a fully functional e-commerce website built using the MERN (Mong
    cd admin
    npm run start
    ```
+<<<<<<< HEAD:README.md
 6. Open `http://localhost:5174/` in your browser.
    ```bash
       No products must be showing - you need to add some from admin panel interface at port:5174
@@ -81,9 +89,19 @@ This project is a fully functional e-commerce website built using the MERN (Mong
 
       you can change these port preference at the respective vite.config.js files
    ```
+=======
+7. Open `http://localhost:5174/` in your browser.
+   ```bash
+      No products must be showing - you need to add some from admin panel interface at port:5174
+      **Some products with images and details are available at assets in frontend**
+>>>>>>> 783276321aa1a89ad74623e682f944564b303090:forever-main/README.md
 
+      Frontend users - at port: 5173
+
+      you can change these port preference at the respective vite.config.js files
+   
 ## Technologies Used
-- **Frontend**: React, Redux, React Router
+- **Frontend**: React, Context, React Router
 - **Backend**: Node.js, Express, MongoDB
 - **Authentication**: JWT
 - **Payment**: Stripe, Razorpay
@@ -98,7 +116,14 @@ To deploy the project on Vercel:
 
 ## Visit My Deployed website
    https://forever-frontend-khaki-kappa.vercel.app/
+<<<<<<< HEAD:README.md
 
 ## Thank You
    -Saksham Sawhney
+=======
+
+## Thank You
+   -Saksham Sawhney
+
+>>>>>>> 783276321aa1a89ad74623e682f944564b303090:forever-main/README.md
 
