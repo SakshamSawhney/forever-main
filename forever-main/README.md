@@ -94,6 +94,9 @@ To deploy the project on Vercel:
 2. Connect the repository to Vercel.
 3. Deploy both the frontend and backend separately.
 
+## Visit My Deployed website
+   https://forever-frontend-khaki-kappa.vercel.app/
+
 ## Thank You
    -Saksham Sawhney
 
