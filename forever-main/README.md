@@ -27,11 +27,11 @@ This project is a fully functional e-commerce website built using the MERN (Mong
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/mern-ecommerce.git
+   git clone https://github.com/SakshamSawhney/forever-main.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd mern-ecommerce
+   cd forever-main
    ```
 3. Install dependencies for both frontend and backend:
    ```bash
@@ -42,7 +42,23 @@ This project is a fully functional e-commerce website built using the MERN (Mong
    cd ../admin
    npm install
    ```
-4. Start the development servers:
+4. Create .env files:
+   ```bash
+   .env in frontend
+      VITE_BACKEND_URL = "http://localhost:4000"
+   .env in backend
+      MONGODB_URI = "<your mongo atlas uri>"
+      CLOUDINARY_API_KEY="<your_CLOUDINARY_API_KEY>"
+      CLOUDINARY_SECRET_KEY="<your_CLOUDINARY_SECRET_KEY>"
+      CLOUDINARY_NAME="<your_CLOUDINARY_NAME>"
+      JWT_SECRET="<type_any_text>"
+      ADMIN_EMAIL="<your_choice_mail>"
+      ADMIN_PASSWORD="<your_choice_password>"
+      STRIPE_SECRET_KEY="<your_stripe_api_key>"
+   .env in admin
+      VITE_BACKEND_URL = "http://localhost:4000"
+   
+5. Start the development servers:
    ```bash
    cd frontend
    npm run dev
@@ -55,10 +71,17 @@ This project is a fully functional e-commerce website built using the MERN (Mong
    cd admin
    npm run start
    ```
-5. Open `http://localhost:5174/` in your browser.
+7. Open `http://localhost:5174/` in your browser.
+   ```bash
+      No products must be showing - you need to add some from admin panel interface at port:5174
+      **Some products with images and details are available at assets in frontend**
 
+      Frontend users - at port: 5173
+
+      you can change these port preference at the respective vite.config.js files
+   
 ## Technologies Used
-- **Frontend**: React, Redux, React Router
+- **Frontend**: React, Context, React Router
 - **Backend**: Node.js, Express, MongoDB
 - **Authentication**: JWT
 - **Payment**: Stripe, Razorpay
@@ -71,9 +94,7 @@ To deploy the project on Vercel:
 2. Connect the repository to Vercel.
 3. Deploy both the frontend and backend separately.
 
-## Contributors
-- **Divanshi Jain** - [GitHub Profile](https://github.com/DivanshiJain2005)
+## Thank You
+   -Saksham Sawhney
 
-## License
-This project is licensed under the MIT License.
 
