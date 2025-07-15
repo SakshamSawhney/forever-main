@@ -37,7 +37,10 @@ const PlaceOrder = () => {
       for(const items in cartItems) {
         for(const item in cartItems[items]){
           if (cartItems[items][item] > 0) {
-            const itemInfo = structuredClone(products.find(product => product._id === item));
+            const itemInfo = structuredClone(products.find((product) =>{ 
+              // console.log(product._id +" and " + items)
+              return product._id === items
+            }));
             if (itemInfo) {
               itemInfo.size = item;
               itemInfo.quantity = cartItems[items][item];
@@ -46,7 +49,7 @@ const PlaceOrder = () => {
           }
         }
       }
-      console.log(formData);
+      // console.log("this is form data"+{formData});
       
       let orderData = {
         address: formData,

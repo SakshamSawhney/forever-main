@@ -23,32 +23,35 @@ const NavBar = () => {
         <li>
           <NavLink to="/" className="flex flex-col items-center gap-1">
             <p>HOME</p>
-            <hr className="w-2/4 border-none h-1.5 bg-gray-700 group-hover:block hidden" />
+            <hr className="w-2/3 border-none h-0.5 bg-gray-700 group-hover:block hidden" />
           </NavLink>
         </li>
         <li>
           <NavLink to="/collection" className="flex flex-col items-center gap-1">
             <p>COLLECTION</p>
-            <hr className="w-2/4 border-none h-1.5 bg-gray-700 group-hover:block hidden" />
+            <hr className="w-2/4 border-none h-0.5 bg-gray-700 group-hover:block hidden" />
           </NavLink>
         </li>
         <li>
           <NavLink to="/about" className="flex flex-col items-center gap-1">
             <p>ABOUT</p>
-            <hr className="w-2/4 border-none h-1.5 bg-gray-700 group-hover:block hidden" />
+            <hr className="w-2/4 border-none h-0.5 bg-gray-700 group-hover:block hidden" />
           </NavLink>
         </li>
         <li>
           <NavLink to="/contact" className="flex flex-col items-center gap-1">
             <p>CONTACT</p>
-            <hr className="w-2/4 border-none h-1.5 bg-gray-700 group-hover:block hidden" />
+            <hr className="w-2/4 border-none h-0.5 bg-gray-700 group-hover:block hidden" />
           </NavLink>
         </li>
       </ul>
 
       {/* Profile and Cart */}
       <div className="flex items-center gap-6">
-        <img onClick={() => setShowSearch(true)} src={assets.search_icon} className="w-5 cursor-pointer" alt="Search" />
+        <img onClick={() => {
+          navigate('/collection');
+          setShowSearch(true)
+          }} src={assets.search_icon} className="w-5 cursor-pointer" alt="Search" />
 
         <div className="group relative">
           <img onClick={() => token ? null : navigate('/login')} className="w-5 cursor-pointer" src={assets.profile_icon} alt="Profile" />
