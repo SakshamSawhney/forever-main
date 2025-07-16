@@ -42,35 +42,48 @@ const Collection = () => {
     if(subCategory.length > 0){
       productsCopy = productsCopy.filter(item => subCategory.includes(item.subCategory))
     }
-    setFilterProducts(productsCopy)
-  }
-
-  const sortProduct = () => {
-    let fpCopy = filterProducts.slice();
-    
-
+    // setFilterProducts(productsCopy)
     switch (sortType) {
       case 'low-high':
-        setFilterProducts(fpCopy.sort((a,b)=>(a.price-b.price)));
+        setFilterProducts(productsCopy.sort((a,b)=>(a.price-b.price)));
         // console.log("at lowhigh:"+sortType);
         break;
       case 'high-low':
-        setFilterProducts(fpCopy.sort((a,b)=>(b.price-a.price)));
+        setFilterProducts(productsCopy.sort((a,b)=>(b.price-a.price)));
         // console.log("at highlow:"+sortType);
         break;
       default:
-        applyFilter();
         break;
     }
-    // console.log(sortType);
+    setFilterProducts(productsCopy)
   }
+
+  // const sortProduct = () => {
+  //   let fpCopy = filterProducts.slice();
+    
+
+  //   switch (sortType) {
+  //     case 'low-high':
+  //       setFilterProducts(fpCopy.sort((a,b)=>(a.price-b.price)));
+  //       // console.log("at lowhigh:"+sortType);
+  //       break;
+  //     case 'high-low':
+  //       setFilterProducts(fpCopy.sort((a,b)=>(b.price-a.price)));
+  //       // console.log("at highlow:"+sortType);
+  //       break;
+  //     default:
+        
+  //       break;
+  //   }
+  //   // console.log(sortType);
+  // }
   useEffect(()=>{
     applyFilter();
-  }, [category, subCategory, search, showSearch, products])
-  useEffect(()=>{
-    // console.log("called at useeffect:"+sortType);
-    sortProduct();
-  }, [sortType])
+  }, [category, subCategory, search, showSearch, products,sortType])
+  // useEffect(()=>{
+  //   // console.log("called at useeffect:"+sortType);
+  //   sortProduct();
+  // }, [sortType])
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
       {/*Filter options */}
