@@ -99,8 +99,7 @@ To deploy the project on Vercel:
 3. Deploy both the frontend and backend separately.
 
 ## Visit My Deployed website
-   https://forever-frontend-khaki-kappa.vercel.app/
-<<<<<<< HEAD:README.md
+   https://forever-frontend-blush-phi.vercel.app/
 
 ## Thank You
    -Saksham Sawhney
